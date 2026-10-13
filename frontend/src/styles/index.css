@@ -860,3 +860,104 @@ html, body {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* Small visual refinements */
+:root {
+  --bg-app: #f6f8f7;
+  --border-color: #e5eae7;
+  --primary-600: #078b68;
+}
+
+body {
+  background-image: radial-gradient(ellipse at 78% -18%, rgba(16, 185, 129, 0.075), transparent 38rem);
+  background-attachment: fixed;
+}
+
+.main-content {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.025);
+}
+
+.navbar-title {
+  font-size: 1.18rem;
+  letter-spacing: -0.035em;
+}
+
+.navbar-subtitle {
+  margin-top: 1px;
+}
+
+.sidebar-header {
+  border-bottom-color: transparent;
+}
+
+.brand-icon-box {
+  border-radius: 11px;
+  background: linear-gradient(145deg, #16b887, #078b68);
+}
+
+.sidebar-nav {
+  padding-top: 12px;
+}
+
+.nav-item {
+  min-height: 42px;
+}
+
+.nav-item.active {
+  background: linear-gradient(90deg, #eaf8f2, #f1faf6);
+  border-color: #d4eee2;
+}
+
+.card {
+  border-color: #e7ece9;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.025);
+}
+
+.card:hover {
+  border-color: #dce7e1;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.055);
+}
+
+.btn:focus-visible,
+.nav-item:focus-visible,
+.form-control:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(16, 185, 129, 0.22);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px 16px 28px;
+  }
+
+  .navbar {
+    height: auto;
+    min-height: 68px;
+    gap: 12px;
+  }
+
+  .navbar-subtitle {
+    display: none;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
